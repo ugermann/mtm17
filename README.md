@@ -12,7 +12,7 @@
 
 ### Installing Marian
 ```
-apt-get update && apt-get install -y \
+sudo apt-get update && sudo apt-get install -y \
 	cmake \
 	git \
 	libboost-dev \
@@ -30,7 +30,7 @@ apt-get update && apt-get install -y \
 	libtool \
 	libboost-all-dev \
 	libgoogle-perftools-dev \
-	libpcre3-dev \
+	libpcre3-dev
 git clone https://github.com/marian-nmt/marian-dev
 cd marian-dev
 mkdir build

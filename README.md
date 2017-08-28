@@ -39,7 +39,13 @@ cmake -DCMAKE_BUILD_TYPE=release -DCUDA=OFF -DMARIAN=OFF ..
 make -j
 ```
 ### Installing Marian (Training and translation)
-- like above, but replace the `cmake` line with `cmake ..`
+
+Like above, but replace 
+- `https://github.com/marian-nmt/marian.git`
+  with
+  `https://github.com/marian-nmt/marian-dev.git`
+
+- the `cmake` line with `cmake ..`
 
 
 

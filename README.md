@@ -35,7 +35,7 @@ git clone https://github.com/marian-nmt/marian-dev
 cd marian-dev
 mkdir build
 cd build
-cmake ..
+cmake cmake -DCMAKE_BUILD_TYPE=release -DCUDA=OFF -DMARIAN=OFF ..
 make -j
 ```
 

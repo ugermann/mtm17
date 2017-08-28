@@ -47,6 +47,12 @@ Like above, but replace
 
 - the `cmake` line with `cmake ..`
 
+### Downloading existing models
+For German-to-English, e.g.
+```
+wget -r -e robots=off -nH -np -R index.html* http://data.statmt.org/mtm17/models/de-en/newest/
+```
+
 
 
 

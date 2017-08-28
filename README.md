@@ -10,8 +10,27 @@
 - [Text indexing with suffix arrays](https://github.com/ugermann/btm)
 - [Marian](https://github.com/marian-nmt/marian-dev)
 
-### installing Marian
+### Installing Marian
 ```
+apt-get update && apt-get install -y \
+	cmake \
+	git \
+	libboost-dev \
+	libeigen3-dev \
+        libopenblas-base \
+        libopenblas-dev \
+	python \
+	python-dev \
+	python-pip \
+	gfortran \
+	zlib1g-dev \
+	g++ \
+	automake \
+	autoconf \
+	libtool \
+	libboost-all-dev \
+	libgoogle-perftools-dev \
+	libpcre3-dev \
 git clone https://github.com/marian-nmt/marian-dev
 cd marian-dev
 mkdir build
@@ -19,6 +38,8 @@ cd build
 cmake ..
 make -j
 ```
+
+
 
 
 

@@ -10,7 +10,7 @@
 - [Text indexing with suffix arrays](https://github.com/ugermann/btm)
 - [Marian](https://github.com/marian-nmt/marian-dev)
 
-### Installing Marian
+### Installing Marian (Translation only)
 ```
 sudo apt-get update && sudo apt-get install -y \
 	cmake \
@@ -35,9 +35,11 @@ git clone https://github.com/marian-nmt/marian-dev
 cd marian-dev
 mkdir build
 cd build
-cmake cmake -DCMAKE_BUILD_TYPE=release -DCUDA=OFF -DMARIAN=OFF ..
+cmake -DCMAKE_BUILD_TYPE=release -DCUDA=OFF -DMARIAN=OFF ..
 make -j
 ```
+### Installing Marian (Training and translation)
+- like above, but replace the `cmake` line with `cmake ..`
 
 
 

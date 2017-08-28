@@ -31,7 +31,7 @@ sudo apt-get update && sudo apt-get install -y \
 	libboost-all-dev \
 	libgoogle-perftools-dev \
 	libpcre3-dev
-git clone https://github.com/marian-nmt/marian-dev
+git clone https://github.com/marian-nmt/marian-dev.git
 cd marian-dev
 mkdir build
 cd build

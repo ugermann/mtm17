@@ -1,0 +1,15 @@
+TODO
+  OK	Describe system operation
+  OK	Describe one mutation step (input for continued training).
+  OK	Describe result of mutation.
+  Implement one mutation step as batch.
+  Implement basic evaluation of mutation results as batch.
+  Prepare virtual machine which repeatedly
+    downloads description of some mutation
+    does continued training according to the description
+    evaluates the result?
+    saves the result ... somewhere.
+  Prepare selection mechanism - probably script that will run on one machine and use results of evaluation may be sufficient in first implementation.
+  Prepare population database - something to store description of individuals.
+  Prepare mutation description generator. (Maybe also GA driven?)
+  Prepare mutation description server. (Simple server with one address which returns each mutation description at most once.)

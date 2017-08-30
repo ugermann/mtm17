@@ -1,0 +1,31 @@
+Parameters should be probably passed as JSON, with structure described later:
+
+Model
+  string URI //where to find model files (directory)
+
+ParallelCorpus
+  string sourceURI //where to find source file
+  string targetURI //where to find target file
+
+Parameters
+  map<string, string> parameters //is set of name:value combination sufficient? probably not - maybe they could be split to sections, each section could be marked by type and should be replaceable by another section of same type, maybe there could be specified functions for crossover of section types (zero to many functions) - worst implementation - fixed sequence of strings
+
+Mutation
+  ParallelCorpus trainingCorpora
+  Parameters trainingParameters
+
+MutationInstance
+  Model originalModel
+  Mutation mutation
+  Model result
+
+Evaluation
+  ParallelCorpus testSet
+  string metricId 
+
+EvaluationInstance
+  Model model
+  Evaluation evaluation
+  string result
+
+

@@ -1,0 +1,15 @@
+Intuition
+  1) Continue training of more instances of original system with slightly different data, learning rate or other setup. (mutation)
+  2) Find systems that have very good score or can translate something that other systems can't. (selection)
+  3) Add further systems by combining systems from selection. (crossover)
+
+Worst case implementation
+  mutation by different learning rate and differently shuffled/splitted data
+  selection by BLEU (or other metric)
+  no crossover
+
+Better implementation
+  added mutation by reasonable data selection (rest of proposal?)
+  added selection of systems that can translate correctly something that other systems can't do
+  crossover by operations on weights (weighted averaging?, random replacing?, random weighted averaging? use some attention ). Maybe ensembles (limited count) could be used and their members may be swapped between ensembles.
+

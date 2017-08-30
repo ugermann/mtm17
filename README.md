@@ -50,8 +50,9 @@ Like above, but replace
 ### Downloading existing models
 For German-to-English, e.g.
 ```
-wget -r -e robots=off -nH -np -R index.html* http://data.statmt.org/mtm17/models/de-en/newest/
+wget -r -e robots=off -nH -np -R index.html* http://data.statmt.org/mtm17/models/de-en//fs/vali0/www/data.statmt.org/summa/mt/models/de-en/20170504/
 ```
+Update: Turns out Marian can't handle the 2017 deep models quite yet, so we'll be using the UEdin Models from WMT16.
 
 ### Data we can use to create test and adaptation data sets
 - [TED](https://wit3.fbk.eu/mt.php?release=2016-01)

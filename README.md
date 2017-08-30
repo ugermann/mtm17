@@ -53,6 +53,9 @@ For German-to-English, e.g.
 wget -r -e robots=off -nH -np -R index.html* http://data.statmt.org/mtm17/models/de-en/newest/
 ```
 
+### Data we can use to create test and adaptation data sets
+- [TED](https://wit3.fbk.eu/mt.php?release=2016-01)
+
 
 
 

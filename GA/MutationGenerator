@@ -1,0 +1,18 @@
+Description of various mutation generator strategies (there should be one generator node for each strategy)
+
+Training corpus mutation (according to assumed input)
+  Find sentences similar to input sentences in available parallel corpus, enrich training corpus by them (or use just them). Intuition: Teach the model to translate similar sentences.
+    Modification: Focus just on sentences with bad translation (if known) - or make them most of the training batch to keep check of the old correct behaviour. Intuition: Teach the model the things it can't so far.
+  Find sentences containing parts of input in available parallel corpus, try to use examples which lead to different translations. Intuition: Teach the model to distinguish between different senses of the same words using context.
+    Modification: Focus just on parts of sentences with bad translation (if known).
+
+Model mutation
+  Train on known domain/problem sentences with high learning rate to converge as quickly as possible.
+  Train on domain/problem sentences with low learning rate to adapt as preciselly as possible.
+  Train on mix of common data and domain/problem sentences with low learning rate to introduce as small error/change as possible.
+  Train on mix of common data and domain/problem sentences with high learning rate to quickly converge without forgetting old knowledge.
+
+Parameter mutation
+  Multiply real number parameters with some value near to 1.
+  Add integer close to 0 to integer parameters.
+  Multiply integer parameters by some real value between 0.5 and 2 and round the result.

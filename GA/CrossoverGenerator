@@ -1,0 +1,15 @@
+Description of various crossover strategies:
+
+Model crossover
+  Weighted sum of weights of individual models
+  Substraction of weights of predecessor from current model makes "operator" which should after adition to another similar model add learned capabilities - and maybe destroy something
+  Composition of operators (with common predecessor): If change is in the same direction, use maximum change, if change is in opposite direction, use sum or arithmetical mean value.
+
+Training should continue after model crossover before selection.
+
+Corpus crossover
+  Select subcorpus of each parent corpus, merge them together. Evaluation using learning and improvement of the model.
+
+Parameter crossover
+  Swap some consistent parameter groups between complete parameter sets. Has to be configured.
+

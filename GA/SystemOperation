@@ -1,15 +1,15 @@
 There may be several types of nodes:
 
 1) task server - node which serves tasks to runner nodes
-2) runner nodes which do the continued training
-3) translator nodes which translate test-sets using models
+2) runner nodes which do the continued training - it periodically gets task from task server and computes it
+3) translator nodes which translate dev/test-sets using models
 4) evaluator nodes who run (various) evaluations using results of translators
 5) selection nodes who select interesting models according to evaluator results
-6) mutation nodes who uses results of selection nodes and evaluator nodes, and feeds task server with new tasks
+6) mutation generator nodes who uses results of selection nodes and evaluator nodes, and feeds task server with new tasks
 
 In first implementation, nodes 2, 3, 4 may be joined and use BLEU, also nodes 5, 6 may be joined and use existing corpora, models and parameters to define new MutationInstances.
 
 In first implementation, task will be of type MutationInstance where result will be placeholder and everything else will be real data.
 The whole needed knowledge for runner operation is task server URL.
 
-Where to store all the data?
+Data will be stored on shared storage and accessible using filename.

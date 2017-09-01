@@ -1,0 +1,9 @@
+[submodule "marian-dev"]
+	path = marian-dev
+	url = https://github.com/marian-nmt/marian-dev.git
+[submodule "moses-scripts"]
+	path = moses-scripts
+	url = https://github.com/marian-nmt/moses-scripts.git
+[submodule "bpe"]
+	path = bpe
+	url = https://github.com/rsennrich/subword-nmt.git

@@ -22,7 +22,16 @@ echo 'das Haus ist blau und Blumen wachsen in der Sonne .' \
      model/baseline/corpus.bpe.de.json 
 ```
 
+# Pre- and postprocessing
 
+Pipe text through `scripts/preprocess.sh de` and `scripts/preprocess.sh en`, respectively, to perform
+- tokenisation
+- truecasing
+- byte pair encoding
+
+of data in line with the processing that was used to pre-process the original training data
+
+Similarly `scripts/postprocess.sh {de|en}` converts decoder output back to 'normal' text.
 
 # Stuff below is not up-to-date
 

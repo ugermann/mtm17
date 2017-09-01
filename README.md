@@ -4,6 +4,29 @@
 
 ## [Project Wiki](https://github.com/ugermann/mtm17/wiki)
 
+# Setup
+```
+git clone https://github.com/ugermann/mtm17.git mtm17
+cd mtm17
+git submodule update --init
+make marian
+make baseline-model
+```
+
+# Can we translate?
+```
+echo 'das Haus ist blau und Blumen wachsen in der Sonne .' \
+| marian-dev/build/s2s \
+  -m model/baseline/model.npz \
+  -v model/baseline/corpus.bpe.de.json \
+     model/baseline/corpus.bpe.de.json 
+```
+
+
+
+# Stuff below is not up-to-date
+
+
 ### Installing Marian (Translation only)
 ```
 export MTM17_ROOT=/some/path

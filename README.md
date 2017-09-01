@@ -57,7 +57,20 @@ Update: Turns out Marian can't handle the 2017 deep models quite yet, so we'll b
 ### Data we can use to create test and adaptation data sets
 - [TED](https://wit3.fbk.eu/mt.php?release=2016-01)
 
-
+## Setting up Marian on Azure instances
+```
+cd /mt
+git clone http:/github.com/marian-nmt/marian-dev.git
+cd marian-dev
+git checkout nematus
+mkdir build
+cmake ..
+make -j
+```
+### Translating with the existing model
+```
+echo 'das Haus ist blau .' | /mt/marian-dev/build/s2s -c /shared/mtm17-ug/s2s-config.yaml
+```
 
 
 

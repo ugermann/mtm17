@@ -19,7 +19,7 @@ echo 'das Haus ist blau und Blumen wachsen in der Sonne .' \
 | marian-dev/build/s2s \
   -m model/baseline/model.npz \
   -v model/baseline/corpus.bpe.de.json \
-     model/baseline/corpus.bpe.de.json 
+     model/baseline/corpus.bpe.en.json 
 ```
 
 # Pre- and postprocessing

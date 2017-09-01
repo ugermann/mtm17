@@ -24,6 +24,12 @@ echo 'das Haus ist blau und Blumen wachsen in der Sonne .' \
 
 # Pre- and postprocessing
 
+Edit `environment.rc` to reflect your local setup. In your current `bash` shell, run
+```
+. environment.rc
+```
+to set some environment variable that this setup relies on.
+
 Pipe text through `scripts/preprocess.sh de` and `scripts/preprocess.sh en`, respectively, to perform
 - tokenisation
 - truecasing

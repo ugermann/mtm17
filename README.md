@@ -69,7 +69,7 @@ make -j
 ```
 ### Translating with the existing model
 ```
-echo 'das Haus ist blau .' | /mt/marian-dev/build/s2s -c /shared/mtm17-ug/s2s-config.yaml
+echo 'das Haus ist blau .' | /mt/marian-dev/build/s2s -c /share/mtm17-ug/s2s-conf.yaml
 ```
 
 

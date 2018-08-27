@@ -1,0 +1,20 @@
+<!doctype html> 
+<script>
+        function setParams(t) {
+            document.getElementById('paramsText').innerHTML =t.value;
+        }; 
+</script>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+
+<div class=left>{{figure|safe}}</div>
+<div class=right>
+
+ <select onchange = "setParams(this);">
+{% for model_name,params in models.iteritems() %}
+ <option value="{{params}}"  name="params" >{{model_name}}</option>
+ {%endfor%}
+</select> 
+<br>
+<textarea name="paramsText" id="paramsText" rows="50" cols="85">Select a model</textarea>
+</div>
+

@@ -1,0 +1,111 @@
+.container {
+   height: auto;
+   overflow: hidden;
+}
+
+.right {
+    float: right;
+    padding:right:50px;
+	margin-right:50px;
+
+}
+
+.left {
+    float: left; 
+    background: #e8f6fe;
+    width: auto;
+    overflow: hidden;
+    font-size: 9pt;
+
+}​​
+
+.button1 {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+body{
+	background-color:#e5ffe5}
+	.button {
+
+		background-color: #4CAF50;
+		border: solid;
+		border-color: #4CAF50;
+		border-width:1px;
+
+        position:relative;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 1px;
+		font-size: 12px;
+        opacity:0.7;
+		transition-duration: 0.3s;
+		display: inline-block; width: 32px;
+}
+
+.button:hover {
+    opacity:1;
+		border: solid;
+		border-width:1px;
+		border-color:#8CEF90;}
+
+.button .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.button .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+
+    }
+
+.task_type{
+        margin:5px;
+		background-color: #d0ffce;
+		border: solid;
+		border-color: #4CAF50;
+		border-width:1px;
+		//width:400px;
+		position:relative;
+		display: inline-block;
+
+}
+
+
+

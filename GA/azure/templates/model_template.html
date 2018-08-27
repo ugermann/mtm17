@@ -1,0 +1,14 @@
+
+
+<!doctype html> 
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+<title>{{model_name}}</title>
+<div class=left>{{figure|safe}}</div>
+<div class=right>
+    {%for param,val in params.iteritems() %}
+    <a style="color:#33348e; text-decoration: none;" href="/models/params.{{param}}/{{val}}"> {{param}}: {{val}} </a>
+    <br>
+    {%endfor%}
+</div>
+<br>
+<a href=/plot_and_info/{{prev_model}}>&lt; </a><a href=/plot_and_info/{{next_model}}>&gt; </a>

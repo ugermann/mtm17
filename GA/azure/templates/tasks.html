@@ -1,0 +1,18 @@
+<!doctype html> 
+<head>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+{%for task_type,tasks in type_tasks.iteritems()%}
+<div class=task_type>
+{{task_type}}<br>
+	{% for task in tasks %}
+		<a   style= "text-decoration: none;" href="/task/{{task.TaskID}}">
+		<span style=" width:40px;margin:0px; background-color: #EEEEEE;  text-decoration: none; background-color: #EEEEEE;" class=button>
+			<span class="tooltiptext">"{{task.Description}}"</span>
+		{{task.TaskID}}</span></a>
+	 {% endfor %}
+
+</div>
+ {% endfor %}
+</body>

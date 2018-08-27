@@ -1,0 +1,66 @@
+<!doctype html> 
+<head>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+$(document).ready(function() {
+
+ $("#ValSel").change(function() {
+
+   document.getElementById('models').innerHTML="";
+
+    $.ajax({url:$SCRIPT_ROOT+"/getSortedModels",
+      dataType: 'json',
+         data : {
+            ValRef : document.getElementById('ValSel').value
+  },
+         success:function(data) {
+                var models= data;
+                console.log(data);
+                for (var i = 0; i < data.models.length; i++) {
+                    console.log(data.models[i]);
+
+                    document.getElementById('models').innerHTML+=`<a style= "text-decoration: none;" href="/plot_and_info/`+data.models[i]+`">
+                    <span style="margin:5px; background-color: #EEEEEE;  text-decoration: none; background-color: #EEEEEE;display: inline-block; width: 155px;" class=button >
+                    <span class="tooltiptext">""</span>`+data.models[i]+`</span></a>`;
+
+                }}
+            });
+
+ });
+
+});
+
+</script>
+
+<script>
+
+function showModels(ValRef) {
+   document.getElementById('models').innerHTML="adas";
+}
+</script>
+
+Sort by BLEU on:
+<select id="ValSel">
+{% for ValRef in val %}
+ <option value="{{ValRef}}"  name="params" >{{ValRef}}</option>
+ {%endfor%}
+</select>
+<div id=models class=task_type>
+
+{%for model in models%}
+ <a   style= "text-decoration: none;" href="/plot_and_info/{{model}}">
+		<span style="margin:5px; background-color: #EEEEEE;  text-decoration: none; background-color: #EEEEEE;display: inline-block; width: 155px;" class=button >
+			<span class="tooltiptext">"{{model.Description}}"</span>
+		{{model}}</span></a>
+
+ {% endfor %}
+ </div>
+
+</body>
